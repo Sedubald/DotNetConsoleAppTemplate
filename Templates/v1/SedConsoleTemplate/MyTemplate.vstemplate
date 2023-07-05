@@ -1,0 +1,33 @@
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Sed Console Application</Name>
+    <Description>A solution template for console application with layer architecture, command line parser, nlog, auto mapper and more.</Description>
+      <ProjectType>CSharp</ProjectType>
+	  <ProjectSubType>Windows</ProjectSubType>
+	  <LanguageTag>CSharp</LanguageTag>
+	  <PlatformTag>Windows</PlatformTag>
+	  <ProjectTypeTag>Desktop</ProjectTypeTag>
+	  <SortOrder>1000</SortOrder>
+	  <CreateNewFolder>true</CreateNewFolder>
+	  <DefaultName>Sed.ConsoleApp</DefaultName>
+	  <ProvideDefaultName>true</ProvideDefaultName>
+	  <LocationField>Enabled</LocationField>
+	  <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+	  <ProjectTemplateLink ProjectName="$safeprojectname$.App" CopyParameters="true">
+        SedConsoleTemplate\MyTemplate.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$safeprojectname$.DataAccess" CopyParameters="true">
+        SedDataTemplate\MyTemplate.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$safeprojectname$.DI" CopyParameters="true">
+        SedDITemplate\MyTemplate.vstemplate
+      </ProjectTemplateLink>
+	  <ProjectTemplateLink ProjectName="$safeprojectname$.Domain" CopyParameters="true">
+        SedDomainTemplate\MyTemplate.vstemplate
+      </ProjectTemplateLink>
+    </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>
